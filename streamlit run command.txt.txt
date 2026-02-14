@@ -1,0 +1,5 @@
+
+
+
+
+ streamlit run "C:\Users\Yuri\Desktop\multiple disease prediction system/multiple disease pred.py.py"
