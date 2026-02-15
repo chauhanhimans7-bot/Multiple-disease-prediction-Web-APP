@@ -13,10 +13,10 @@ import pickle
 import warnings
 warnings.filterwarnings("ignore", category=UserWarning)
 
-path = "C:/Users/Yuri/Desktop/multiple disease prediction system/saved model/diabetes_model.sav"
-diabetes_model =pickle.load(open(path,'rb'))
-heart_disease_model = pickle.load(open("C:/Users/Yuri/Desktop/multiple disease prediction system/saved model/heart_disease.sav",'rb'))
-parkinsons_model = pickle.load(open("C:/Users/Yuri/Desktop/multiple disease prediction system/saved model/parkinsons_model.sav",'rb'))
+# Load the saved models (now they are in the same folder as the app)
+diabetes_model = pickle.load(open('diabetes_model.sav', 'rb'))
+heart_disease_model = pickle.load(open('heart_disease.sav', 'rb'))
+parkinsons_model = pickle.load(open('parkinsons_model.sav', 'rb'))
 st.markdown("""
     <style>
     /* 1. Style the button itself */
@@ -219,4 +219,5 @@ if (selected == "Parkinsons Prediction"):
                     st.success(parkinsons_diagnosis)
             
             except ValueError:
+
                 st.error("Please enter valid numeric values. Make sure there are no letters in the fields.")                             
